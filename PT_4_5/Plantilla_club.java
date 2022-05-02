@@ -14,6 +14,58 @@ public class Plantilla_club {
     private int num_empleat;
     private int num_seguretat_social;
     private double sou_base;
+
+    public Plantilla_club(String nom, String DNI, String cognoms, LocalDate data_naix, int telefon, String email, int num_empleat, int num_seguretat_social, double sou_base) {
+        this.nom = nom;
+        this.DNI = DNI;
+        this.cognoms = cognoms;
+        this.data_naix = data_naix;
+        this.telefon = telefon;
+        this.email = email;
+        this.num_empleat = num_empleat;
+        this.num_seguretat_social = num_seguretat_social;
+        this.sou_base = sou_base;
+    }
+
+    Plantilla_club() {
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public String getCognoms() {
+        return cognoms;
+    }
+
+    public LocalDate getData_naix() {
+        return data_naix;
+    }
+
+    public int getTelefon() {
+        return telefon;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int getNum_empleat() {
+        return num_empleat;
+    }
+
+    public int getNum_seguretat_social() {
+        return num_seguretat_social;
+    }
+
+    public double getSou_base() {
+        return sou_base;
+    }
+     
     
     public void gestionarPlantilla() throws SQLException {
         Scanner teclat = new Scanner(System.in);

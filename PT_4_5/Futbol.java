@@ -47,7 +47,7 @@ public class Futbol {
     
     private void consultaDades(){
          Club c1 = new Club();
-
+                  
         c1.consultaDades();
     }
     
