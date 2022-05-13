@@ -3,10 +3,48 @@ package PT_4_5;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Socis {
+public class Socis extends Persona{
     private int num_soci;
     private int num_localitat;
     private int quota_aunal;
+    
+    public void dadesSocis(){
+        Socis s1 = new Socis();
+        s1.DNI="24861247R";
+        s1.nom="Alastor";
+        s1.cognoms="Hazbin Garcia";
+        s1.telefon=687452012;
+        s1.email="alastorh@gmail.com";
+        s1.num_localitat=12;
+        s1.num_soci=01;
+        s1.quota_aunal=200;
+        
+    }
+    
+    public void dadesSocis2(){
+        Socis s2 = new Socis();
+        s2.DNI="01478543Q";
+        s2.nom="Charlie";
+        s2.cognoms="Morningstar Magne";
+        s2.telefon=875410232;
+        s2.email="charliemorn@gmail.com";
+        s2.num_localitat=9;
+        s2.num_soci=02;
+        s2.quota_aunal=300;
+        
+    }
+        
+    public void dadesSocis3(){
+        Socis s3 = new Socis();
+        s3.DNI="20584032M";
+        s3.nom="Blitzo";
+        s3.cognoms="Rodeo Imp";
+        s3.telefon=851024523;
+        s3.email="blitzimp@gmail.com";
+        s3.num_localitat=13;
+        s3.num_soci=03;
+        s3.quota_aunal=250;
+    }
     
     public void gestionarSocis() throws SQLException {
         Scanner teclat = new Scanner(System.in);
@@ -83,5 +121,6 @@ public class Socis {
       private void quota(){
        
 }
+      
     
 }

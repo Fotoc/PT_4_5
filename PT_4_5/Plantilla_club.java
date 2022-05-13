@@ -4,24 +4,17 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Plantilla_club {
-    private String nom;
-    private String DNI;
-    private String cognoms;
+public class Plantilla_club extends Persona{
+
     private LocalDate data_naix;
-    private int telefon;
-    private String email;
     private int num_empleat;
     private int num_seguretat_social;
     private double sou_base;
 
     public Plantilla_club(String nom, String DNI, String cognoms, LocalDate data_naix, int telefon, String email, int num_empleat, int num_seguretat_social, double sou_base) {
-        this.nom = nom;
-        this.DNI = DNI;
-        this.cognoms = cognoms;
+      
+       
         this.data_naix = data_naix;
-        this.telefon = telefon;
-        this.email = email;
         this.num_empleat = num_empleat;
         this.num_seguretat_social = num_seguretat_social;
         this.sou_base = sou_base;
@@ -30,29 +23,12 @@ public class Plantilla_club {
     Plantilla_club() {
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public String getDNI() {
-        return DNI;
-    }
-
-    public String getCognoms() {
-        return cognoms;
-    }
+   
 
     public LocalDate getData_naix() {
         return data_naix;
     }
 
-    public int getTelefon() {
-        return telefon;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 
     public int getNum_empleat() {
         return num_empleat;

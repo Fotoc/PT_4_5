@@ -1,5 +1,9 @@
 package PT_4_5;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 public class Club {
     private String nom;
     private String CIF;
@@ -20,6 +24,23 @@ public class Club {
         
         System.out.println("nom del club: " + c1.nom + " "+ "CIF: " + c1.CIF  + " " + "adreça: " + c1.adreça +  " "+ "telefon: " + c1.telefon + " " + "email: " + c1.email +  " " + "página web: " + c1.www +  " ");
         
+        File archivo = new File("club.dat");
+         
+        try {
+           
+            FileOutputStream fos = new FileOutputStream(archivo);       
+            ObjectOutputStream escribir = new ObjectOutputStream(fos);
+
+            escribir.writeObject(c1);
+
+            escribir.close();
+            fos.close();
+             
+        } catch (Exception e) {
+            System.out.println("Error al escriure l'arxiu "
+                    + e.getMessage());   
+        }
+        
         
     }
     
@@ -30,5 +51,6 @@ public class Club {
     public void visualitzarDadesEco(){
         
     }
+   
     
 }
