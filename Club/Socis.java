@@ -10,7 +10,7 @@ public class Socis extends Persona {
     private int num_localitat;
     private int quota_aunal;
 
-    HashMap<String, String> soci = new HashMap<String, String>();
+    HashMap<String, Socis> soci = new HashMap<>();
 
     public Socis(int num_soci, int num_localitat, int quota_aunal, String DNI, String nom, String cognoms, int telefon, String email) {
         super(DNI, nom, cognoms, telefon, email);
@@ -75,10 +75,10 @@ public class Socis extends Persona {
     }
 
     private void altaS() {
-        soci.put("14547058H", new Socis(121, 1, 100, "14547058H", "Alastor", "Hazbin", "628741023", "alastor@gmail.com"));
-        soci.put("12389488D", new Socis(122, 2, 200, "12389488D", "Vaggie", "Garcia", "628874589", "vaggie@gmail.com"));
-        soci.put("76189996N", new Socis(123, 3, 300, "76189996N", "Blitzo", "Rodeo", "628502348", "blitz@gmail.com"));
-        soci.put("76189996N", new Socis(124, 4, 400, "76189996N", "Charlie", "Morningstar", "628754012", "charlie@gmail.com"));
+        soci.put("14547058H", new Socis(121, 1, 100, "14547058H", "Alastor", "Hazbin", 628741023, "alastor@gmail.com"));
+        soci.put("12389488D", new Socis(122, 2, 200, "12389488D", "Vaggie", "Garcia", 628874589, "vaggie@gmail.com"));
+        soci.put("76189996N", new Socis(123, 3, 300, "76189996N", "Blitzo", "Rodeo", 628502348, "blitz@gmail.com"));
+        soci.put("76189996N", new Socis(124, 4, 400, "76189996N", "Charlie", "Morningstar", 628754012, "charlie@gmail.com"));
 
     }
 
