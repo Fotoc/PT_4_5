@@ -1,32 +1,20 @@
 package Futbol;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.sql.SQLException;
 
 public class Futbol_app {
 
     public static void main(String args[]) throws SQLException, IOException {
         Futbol f = new Futbol();
+        
+//        System.out.println(new File(".").getAbsolutePath());
+//        if (new File("IMPClub1.dat").exists()){
+//            System.out.println("El fitxer existeix");
+//        }
 
-        File club = new File("club.dat");
-        try {
-
-            FileOutputStream fos = new FileOutputStream(club);
-            ObjectOutputStream dades = new ObjectOutputStream(fos);
-
-            dades.writeObject(soci);
-
-            dades.close();
-            fos.close();
-
-        } catch (Exception e) {
-            System.out.println("Error al afegir les dades al arxiu."
-                    + e.getMessage());
-        }
         f.gestionarEquip();
-
+        
     }
 }
